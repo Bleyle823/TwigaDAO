@@ -1,11 +1,34 @@
-# TwigaDAO
-Twiga DAO based in Nairobi National Park is a community-driven initiative aimed at protecting the park's biodiversity and promoting sustainable conservation practices. 
-The DAO brings together local communities, conservationists, government agencies, and global environmental activists to leverage blockchain technology for transparent decision-making, resource allocation, and governance. Through tokenized incentives, voting mechanisms, and decentralized participation, this DAO facilitates projects that directly benefit the park's wildlife, flora, and surrounding ecosystems.
+# World ID Next.js Template
 
-# Benefits:
+This is a template repository for creating a new project using Next.js, TailwindCSS, and the [World ID SDK](https://id.worldcoin.org). This template isn't intended for use cases that require on-chain verification, but rather for use cases that leverage off-chain web backend verification.
 
-Transparency: The DAO's decentralized structure ensures that all decisions, votes, and funds related to conservation efforts are transparent, allowing for full accountability.
-Community Empowerment: Local stakeholders, including park rangers, residents, and NGOs, have an active role in the decision-making process, ensuring that conservation efforts align with the needs of the community.
-Sustainable Funding: The DAO can issue tokenized funds, allowing for donations, grants, and investment from global conservation entities, businesses, and individuals interested in supporting the park’s preservation.
-Data-Driven Decisions: Blockchain integration provides secure, immutable tracking of conservation activities, allowing for better planning, data analysis, and decision-making based on real-time information.
-Decentralized Governance: With token-based voting, members of the DAO can propose and vote on policies related to the park, ensuring that all voices are heard in the governance of the park’s resources.
+## Getting Started
+
+First, set the correct Node.js version using `nvm` and run the development server:
+
+```bash
+nvm use 20
+pnpm i && pnpm dev
+```
+
+Copy `.env.example` to `.env.local` and add your World ID App ID and Action Name to the appropriate variables.
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+This template includes a server action to verify the proof returned by the IDKit widget at `src/app/actions/verify.ts`. Edit this file to handle any backend functions you need to perform after the proof has been verified.
+
+You can start editing the client-side page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file. Edit the `onSuccess` function to define frontend behavior once the proof has been verified.
+
+## Learn More
+
+To learn more about Next.js and World ID, take a look at the following resources:
+
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [World ID Documentation](https://docs.worldcoin.org/) - learn about World ID features and API.
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

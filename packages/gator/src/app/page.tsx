@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/Hero";
+// import Hero from "@/components/Hero";
 import {
   createMetaMaskAccount,
   createDAOVoteDelegation,
@@ -111,7 +111,7 @@ function App() {
 
   return (
     <div className="mx-auto">
-      <Hero />
+      {/* <Hero /> */}
       <h2 className="text-2xl font-bold mb-4">
         Delegation Quickstart with MetaMask Delegation Toolkit
       </h2>

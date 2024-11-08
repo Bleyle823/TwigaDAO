@@ -6,6 +6,7 @@ import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
+import WorldIDVerification from '../../worldID/components/WorldIDVerification';
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
@@ -18,11 +19,12 @@ const Home: NextPage = () => {
             <span className="block text-2xl mb-2">Welcome to</span>
             <div className="block text-4xl font-bold">
               <div className="inline-block relative w-10 h-10 align-bottom mr-2">
-                <Image alt="Base logo" className="cursor-pointer" fill src="/Base_Symbol_Blue.svg" />
+                {/* <Image alt="Base logo" className="cursor-pointer" fill src="/Base_Symbol_Blue.svg" /> */}
               </div>
-              Scaffold-Base
+              Twiga DAO 🦒
             </div>
           </h1>
+          <WorldIDVerification />
           <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
             <p className="my-2 font-medium">Connected Address:</p>
             <Address address={connectedAddress} />
